@@ -1,4 +1,4 @@
-app.controller("NeighborController", function () {
+app.controller("NeighborController", function ($scope) {
 
     function Neighbor(person, address, phone, talents, needs) {
         this.person = person;

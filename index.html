@@ -7,8 +7,73 @@
 </head>
 
 <body ng-controller="NeighborController as nc">
-    
-    <div></div>
+    <div class="container">
+        <div class="row">
+            <form action="" ng-submit="new-person()">
+
+
+                <div class="col-sm-4">
+                    <label for="name">Name</label>
+                    <br>
+                    <input id="name" type="text" ng-model="name">
+                    <br>
+                    <label for="address">Address</label>
+                    <br>
+                    <input id="address" type="text" ng-model="address">
+                    <br>
+                    <label for="phone">Personal Phone Number</label>
+                    <br>
+                    <input id="phone" type="text" ng-model="phone">
+                    <br>
+                </div>
+<div class="col-sm-4">
+    <label for="talent-1">Talent #1</label>
+    <br>
+    <input id="talent-1" type="text">
+    <br>
+    <label for="talent-2">Talent #2</label>
+    <br>
+    <input id="talent-2" type="text">
+    <br>
+    <label for="talent-3">Talent #3</label>
+    <br>
+    <input id="talent-3" type="text">
+    <br>
+    <label for="talent-4">Talent #4</label>
+    <br>
+    <input id="talent-4" type="text">
+    <br>
+    <label for="talent-5">Talent #5</label>
+    <br>
+    <input id="talent-5" type="text">
+    <br> 
+</div>
+<div class="col-sm-4">
+    <label for="need-1">Need #1</label>
+    <br>
+    <input id="need-1" type="text">
+    <br>
+    <label for="need-2">Need #2</label>
+    <br>
+    <input id="need-2" type="text">
+    <br>
+    <label for="need-3">Need #3</label>
+    <br>
+    <input id="need-3" type="text">
+    <br>
+    <label for="need-4">Need #4</label>
+    <br>
+    <input id="need-4" type="text">
+    <br>
+    <label for="need-5">Need #5</label>
+    <br>
+    <input id="need-5" type="text">
+    <br> 
+</div>
+
+            </form>
+        </div>
+    </div>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
     <script src="plugins.angularfire.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
