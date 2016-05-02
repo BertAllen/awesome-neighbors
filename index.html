@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>My Awesome Neighbors</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
     <link rel="stylesheet" href="style/style.css">
 </head>
 
@@ -11,83 +12,85 @@
     <div class="container">
         <div class="row">
             <h1 style="text-align: center">My Awesome Neighbors!</h1>
-            <form action="" ng-submit="new-person()">
-
+            <form action="" class="form-group" ng-submit="addNeighbor()">
                 <div class="col-sm-3">
-                    <label for="first-name">First Name</label>
+                    <!--<br>-->
+                    <input id="first-name" class="form-control" type="text" placeholder="First Name" ng-model="person.firstName">
+                    <!--<br>-->
                     <br>
-                    <input id="first-name" type="text" ng-model="person.firstName">
+                    <input id="last-name" class="form-control" type="text" placeholder="Last Name" ng-model="person.lastName">
                     <br>
-                    <label for="last-name">Last Name</label>
+                    <!--<br>-->
+                    <input id="address" class="form-control" type="text" placeholder="Street Address" ng-model="person.address">
                     <br>
-                    <input id="last-name" type="text" ng-model="person.lastName">
+                    <!--<br>-->
+                    <input id="phone" class="form-control" type="text" placeholder="Personal Phone Number" ng-model="person.phone">
                     <br>
-                    <label for="address">Street Address</label>
-                    <br>
-                    <input id="address" type="text" ng-model="person.address">
-                    <br>
-                    <label for="phone">Personal Phone Number</label>
-                    <br>
-                    <input id="phone" type="text" ng-model="person.phone">
-                    <br>
-<button class="btn btn-success pull-right" >Save</button>
+                    <button class="btn btn-success pull-right" ng-click="submit">Save</button>
                 </div>
                 <div class="col-sm-3">
-                    <label for="talent-1">Talent #1</label>
+                    <!--<br>-->
+                    <input id="talent-1" class="form-control" type="text" placeholder="Talent #1" ng-model="person.talent1">
+                    <!--<br>-->
                     <br>
-                    <input id="talent-1" type="text" ng-model="person.talent1">
+                    <input id="talent-2" class="form-control" type="text" placeholder="Talent #2" ng-model="person.talent2">
+                    <!--<br>-->
                     <br>
-                    <label for="talent-2">Talent #2</label>
+                    <input id="talent-3" class="form-control" type="text" placeholder="Talent #3" ng-model="person.talent3">
+                    <!--<br>-->
                     <br>
-                    <input id="talent-2" type="text" ng-model="person.talent2">
+                    <input id="talent-4" class="form-control" type="text" placeholder="Talent #4" ng-model="person.talent4">
+                    <!--<br>-->
                     <br>
-                    <label for="talent-3">Talent #3</label>
-                    <br>
-                    <input id="talent-3" type="text" ng-model="person.talent3">
-                    <br>
-                    <label for="talent-4">Talent #4</label>
-                    <br>
-                    <input id="talent-4" type="text" ng-model="person.talent4">
-                    <br>
-                    <label for="talent-5">Talent #5</label>
-                    <br>
-                    <input id="talent-5" type="text" ng-model="person.talent5">
+                    <input id="talent-5" class="form-control" type="text" placeholder="Talent #5" ng-model="person.talent5">
                     <br>
                 </div>
                 <div class="col-sm-3">
-                    <label for="need-1">Need #1</label>
+                    <!--<br>-->
+                    <input id="need-1" class="form-control" type="text" placeholder="Need #1" ng-model="person.need1">
+                    <!--<br>-->
                     <br>
-                    <input id="need-1" type="text" ng-model="person.need1">
+                    <input id="need-2" class="form-control" type="text" placeholder="Need #1" ng-model="person.need2">
+                    <!--<br>-->
                     <br>
-                    <label for="need-2">Need #2</label>
+                    <input id="need-3" class="form-control" type="text" placeholder="Need #1" ng-model="person.need3">
+                    <!--<br>-->
                     <br>
-                    <input id="need-2" type="text" ng-model="person.need2">
+                    <input id="need-4" class="form-control" type="text" placeholder="Need #1" ng-model="person.need4">
+                    <!--<br>-->
                     <br>
-                    <label for="need-3">Need #3</label>
-                    <br>
-                    <input id="need-3" type="text" ng-model="person.need3">
-                    <br>
-                    <label for="need-4">Need #4</label>
-                    <br>
-                    <input id="need-4" type="text" ng-model="person.need4">
-                    <br>
-                    <label for="need-5">Need #5</label>
-                    <br>
-                    <input id="need-5" type="text" ng-model="person.need5">
+                    <input id="need-5" class="form-control" type="text" placeholder="Need #1" ng-model="person.need5">
                     <br>
                 </div>
-
             </form>
-            <div class="col-sm-3" ng-controller="AwesomeController as ac">
-                
-            </div>
+            <form action="" class="form-group" ng-submit="findNeighbor()">
+                <div class="col-sm-3" ng-controller="AwesomeController as ac">
+                    <h3>Finding Neighbors</h3>
+                    <h4>Filter By:</h4>
+                    <label for="group">Personal or Group</label>
+                    <br>
+                    <span>Personal</span> <input name="group" type="radio" value="p" ngmodel="groupsize">
+                    <span>Group</span> <input name="group" type="radio" value="g" ngmodel="groupsize">
+                    <br>
+                    <br>
+                    <label for="catagory">Needs or Talents</label>
+                    <br>
+                    <span>Needs</span> <input name="n-or-t" type="radio" value="n" ngmodel="helpinghands">
+                    <span>Talents</span> <input name="n-or-t" type="radio" value="t" ngmodel="helpinghands">
+                    <br>
+                    <br>
+                    <button class="btn btn-warning" ng-click="submit">Find Neighbors</button>
+                </div>
+            </form>
         </div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
-    <script src="plugins.angularfire.min.js"></script>
+    <script src="plugins/angularfire.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <script src="app/app.js"></script>
     <script src="app/ac.js"></script>
+    <script src="app/ns.js"></script>
 </body>
 
 </html>
