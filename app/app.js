@@ -1,4 +1,4 @@
-app.controller("NeighborController", function ($scope) {
+angular.module("MasterController", []).controller("NeighborController", function ($scope) {
     $scope.neighbors = [];
     $scope.Neighbor = function ($scope.person) {
         this.firstName = $scope.person.firstName;

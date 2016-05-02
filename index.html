@@ -4,15 +4,16 @@
     <meta charset="UTF-8">
     <title>My Awesome Neighbors</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style/style.css">
 </head>
 
 <body ng-controller="NeighborController as nc">
     <div class="container">
         <div class="row">
+            <h1 style="text-align: center">My Awesome Neighbors!</h1>
             <form action="" ng-submit="new-person()">
 
-
-                <div class="col-sm-4">
+                <div class="col-sm-3">
                     <label for="first-name">First Name</label>
                     <br>
                     <input id="first-name" type="text" ng-model="person.firstName">
@@ -29,8 +30,9 @@
                     <br>
                     <input id="phone" type="text" ng-model="person.phone">
                     <br>
+<button class="btn btn-success pull-right" >Save</button>
                 </div>
-                <div class="col-sm-4">
+                <div class="col-sm-3">
                     <label for="talent-1">Talent #1</label>
                     <br>
                     <input id="talent-1" type="text" ng-model="person.talent1">
@@ -52,7 +54,7 @@
                     <input id="talent-5" type="text" ng-model="person.talent5">
                     <br>
                 </div>
-                <div class="col-sm-4">
+                <div class="col-sm-3">
                     <label for="need-1">Need #1</label>
                     <br>
                     <input id="need-1" type="text" ng-model="person.need1">
@@ -76,13 +78,16 @@
                 </div>
 
             </form>
+            <div class="col-sm-3" ng-controller="AwesomeController as ac">
+                
+            </div>
         </div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
     <script src="plugins.angularfire.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-    <script src="app/mc.js"></script>
     <script src="app/app.js"></script>
+    <script src="app/ac.js"></script>
 </body>
 
 </html>
