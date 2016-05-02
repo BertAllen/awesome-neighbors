@@ -12,7 +12,7 @@
     <div class="container">
         <div class="row">
             <h1 style="text-align: center">My Awesome Neighbors!</h1>
-            <form action="" class="form-group" ng-submit="addNeighbor()">
+            <form action="" class="form-group" ng-submit="nc.addNeighbor(person)">
                 <div class="col-sm-3">
                     <!--<br>-->
                     <input id="first-name" class="form-control" type="text" placeholder="First Name" ng-model="person.firstName">
@@ -83,6 +83,20 @@
                 </div>
             </form>
         </div>
+        <div class="row" ng-controller="NeighborController as nc">
+            <div class="col-sm-3" ng-repeat="human in nc.neighbors">
+                <h2>{{human.firstName}} {{human.lastName}}</h2>
+                <h4>{{human.address}}</h4>
+                <h4>{{human.phoneNumber}}</h4>
+                <ul ng-repeat="talent in person.talents">
+                    <li>{{talent}}</li>
+                </ul>
+                <ul ng-repeat="need in person.need">
+                    <li>{{need}}</li>
+                </ul>
+            </div>
+        </div>
+        
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
     <script src="plugins/angularfire.min.js"></script>
