@@ -12,52 +12,38 @@
     <div class="container">
         <div class="row">
             <h1 style="text-align: center">My Awesome Neighbors!</h1>
-            <form action="" class="form-group" ng-submit="nc.addNeighbor(person)">
+            <form action="" class="form-group" ng-submit="addNeighbor(person)">
                 <div class="col-sm-3">
-                    <!--<br>-->
                     <input id="first-name" class="form-control" type="text" placeholder="First Name" ng-model="person.firstName">
-                    <!--<br>-->
                     <br>
                     <input id="last-name" class="form-control" type="text" placeholder="Last Name" ng-model="person.lastName">
                     <br>
-                    <!--<br>-->
                     <input id="address" class="form-control" type="text" placeholder="Street Address" ng-model="person.address">
                     <br>
-                    <!--<br>-->
                     <input id="phone" class="form-control" type="text" placeholder="Personal Phone Number" ng-model="person.phone">
                     <br>
                     <button class="btn btn-success pull-right" ng-click="submit">Save</button>
                 </div>
                 <div class="col-sm-3">
-                    <!--<br>-->
                     <input id="talent-1" class="form-control" type="text" placeholder="Talent #1" ng-model="person.talent1">
-                    <!--<br>-->
                     <br>
                     <input id="talent-2" class="form-control" type="text" placeholder="Talent #2" ng-model="person.talent2">
-                    <!--<br>-->
                     <br>
                     <input id="talent-3" class="form-control" type="text" placeholder="Talent #3" ng-model="person.talent3">
-                    <!--<br>-->
                     <br>
                     <input id="talent-4" class="form-control" type="text" placeholder="Talent #4" ng-model="person.talent4">
-                    <!--<br>-->
                     <br>
                     <input id="talent-5" class="form-control" type="text" placeholder="Talent #5" ng-model="person.talent5">
                     <br>
                 </div>
                 <div class="col-sm-3">
-                    <!--<br>-->
                     <input id="need-1" class="form-control" type="text" placeholder="Need #1" ng-model="person.need1">
-                    <!--<br>-->
                     <br>
                     <input id="need-2" class="form-control" type="text" placeholder="Need #1" ng-model="person.need2">
-                    <!--<br>-->
                     <br>
                     <input id="need-3" class="form-control" type="text" placeholder="Need #1" ng-model="person.need3">
-                    <!--<br>-->
                     <br>
                     <input id="need-4" class="form-control" type="text" placeholder="Need #1" ng-model="person.need4">
-                    <!--<br>-->
                     <br>
                     <input id="need-5" class="form-control" type="text" placeholder="Need #1" ng-model="person.need5">
                     <br>
@@ -84,7 +70,7 @@
             </form>
         </div>
         <div class="row" ng-controller="NeighborController as nc">
-            <div class="col-sm-3" ng-repeat="human in nc.neighbors">
+            <div class="col-sm-3" ng-repeat="human in neighbors">
                 <h2>{{human.firstName}} {{human.lastName}}</h2>
                 <h4>{{human.address}}</h4>
                 <h4>{{human.phoneNumber}}</h4>

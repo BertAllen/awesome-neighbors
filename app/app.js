@@ -1,10 +1,10 @@
 angular.module("MasterController", ['firebase'])
-    .controller("NeighborController", function (NeighborService) {
+    .controller("NeighborController", function (NeighborService, $scope) {
         var nc = this;
         var ns = NeighborService;
-        this.neighbors = [];
+        $scope.neighbors = [];
         // nc.moNeighbors = ns.neighbors
-        this.Neighbor = function (person) {
+        $scope.Neighbor = function (person) {
             debugger;
             this.firstName = person.firstName;
             this.lastName = person.lastName;
@@ -43,11 +43,11 @@ angular.module("MasterController", ['firebase'])
                 this.needs.push(person.need5);
             }
         }
-        nc.addNeighbor = function (person) {
+        $scope.addNeighbor = function (person) {
             debugger;
-            var human = new nc.Neighbor(person);
+            var human = new $scope.Neighbor(person);
             debugger;
-           nc.neighbors.push(human);
+           $scope.neighbors.push(human);
             // nc.moNeighbors = ns.neighbors
 
         }
