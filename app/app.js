@@ -17,6 +17,7 @@
         // nc.moNeighbors = ns.neighbors
         nc.Neighbor = function (person) {
             // debugger;
+
             this.firstName = person.firstName;
             this.lastName = person.lastName;
             this.address = person.address;
@@ -35,6 +36,7 @@
             // NeighborService.neighbors.push(human);
             // nc.neighbors = NeighborService.neighbors;
             nc.neighbors.push(human);
+
         }
 
 
