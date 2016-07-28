@@ -24,9 +24,13 @@
             this.phone = person.phone;
             this.talents = [];
             this.needs = [];
-            for (var i = 0; i < 5; i++){
-            this.talents.push(person.talent[i]);
-            this.needs.push(person.need[i]);
+            for (var i = 0; i < 5; i++) {
+                if (person.talent[i]) {
+                    this.talents.push(person.talent[i]);
+                }
+                if (person.need[i]) {
+                    this.needs.push(person.need[i]);
+                }
             }
         }
 
@@ -36,7 +40,7 @@
             // NeighborService.neighbors.push(human);
             // nc.neighbors = NeighborService.neighbors;
             nc.neighbors.push(human);
-
+            nc.person = {}
         }
 
 
