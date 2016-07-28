@@ -1,0 +1,74 @@
+<div class="container">
+        <div class="row">
+            <h1 style="text-align: center">My Awesome Neighbors!</h1>
+            <form class="form-group" ng-submit="nc.addNeighbor(nc.person)">
+                <div class="col-sm-3">
+                    <!--<br>-->
+                    <input id="first-name" class="form-control" type="text" placeholder="First Name" ng-model="nc.person.firstName">
+                    <!--<br>-->
+                    <br>
+                    <input id="last-name" class="form-control" type="text" placeholder="Last Name" ng-model="nc.person.lastName">
+                    <br>
+                    <!--<br>-->
+                    <input id="address" class="form-control" type="text" placeholder="Street Address" ng-model="nc.person.address">
+                    <br>
+                    <!--<br>-->
+                    <input id="phone" class="form-control" type="text" placeholder="Personal Phone Number" ng-model="nc.person.phone">
+                    <br>
+                    <button class="btn btn-success pull-right" type="submit">Save</button>
+                </div>
+                <div class="col-sm-3">
+                    <!--<br>-->
+                    <input id="talent-1" class="form-control" type="text" placeholder="Talent #1" ng-model="nc.person.talent[0]">
+                    <!--<br>-->
+                    <br>
+                    <input id="talent-2" class="form-control" type="text" placeholder="Talent #2" ng-model="nc.person.talent[1]">
+                    <!--<br>-->
+                    <br>
+                    <input id="talent-3" class="form-control" type="text" placeholder="Talent #3" ng-model="nc.person.talent[2]">
+                    <!--<br>-->
+                    <br>
+                    <input id="talent-4" class="form-control" type="text" placeholder="Talent #4" ng-model="nc.person.talent[3]">
+                    <!--<br>-->
+                    <br>
+                    <input id="talent-5" class="form-control" type="text" placeholder="Talent #5" ng-model="nc.person.talent[4]">
+                    <br>
+                </div>
+                <div class="col-sm-3">
+                    <!--<br>-->
+                    <input id="need-1" class="form-control" type="text" placeholder="Need #1" ng-model="nc.person.need[0]">
+                    <!--<br>-->
+                    <br>
+                    <input id="need-2" class="form-control" type="text" placeholder="Need #1" ng-model="nc.person.need[1]">
+                    <!--<br>-->
+                    <br>
+                    <input id="need-3" class="form-control" type="text" placeholder="Need #1" ng-model="nc.person.need[2]">
+                    <!--<br>-->
+                    <br>
+                    <input id="need-4" class="form-control" type="text" placeholder="Need #1" ng-model="nc.person.need[3]">
+                    <!--<br>-->
+                    <br>
+                    <input id="need-5" class="form-control" type="text" placeholder="Need #1" ng-model="nc.person.need[4]">
+                    <br>
+                </div>
+            </form>
+            
+<awesome-component></awesome-component>
+
+        </div>
+        <div class="row">
+            <div class="col-sm-3" ng-repeat="human in nc.neighbors">
+                <h2>{{human.firstName}} {{human.lastName}}</h2>
+                <h4>{{human.address}}</h4>
+                <h4>{{human.phoneNumber}}</h4>
+                <ul ng-repeat="talent in human.talents">
+                    <li>{{talent}}</li>
+                </ul>
+                <ul ng-repeat="need in human.need">
+                    <li>{{need}}</li>
+                </ul>
+            </div>
+        </div>
+        
+    </div>
+    

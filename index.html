@@ -1,4 +1,4 @@
-<html ng-app="MasterController">
+<html ng-app="awesomeNeighbors">
 
 <head>
     <meta charset="UTF-8">
@@ -8,97 +8,11 @@
     <link rel="stylesheet" href="style/style.css">
 </head>
 
-<body ng-controller="NeighborController as nc">
-    <div class="container">
-        <div class="row">
-            <h1 style="text-align: center">My Awesome Neighbors!</h1>
-            <form action="" class="form-group" ng-submit="nc.addNeighbor(person)">
-                <div class="col-sm-3">
-                    <!--<br>-->
-                    <input id="first-name" class="form-control" type="text" placeholder="First Name" ng-model="person.firstName">
-                    <!--<br>-->
-                    <br>
-                    <input id="last-name" class="form-control" type="text" placeholder="Last Name" ng-model="person.lastName">
-                    <br>
-                    <!--<br>-->
-                    <input id="address" class="form-control" type="text" placeholder="Street Address" ng-model="person.address">
-                    <br>
-                    <!--<br>-->
-                    <input id="phone" class="form-control" type="text" placeholder="Personal Phone Number" ng-model="person.phone">
-                    <br>
-                    <button class="btn btn-success pull-right" ng-click="submit">Save</button>
-                </div>
-                <div class="col-sm-3">
-                    <!--<br>-->
-                    <input id="talent-1" class="form-control" type="text" placeholder="Talent #1" ng-model="person.talent1">
-                    <!--<br>-->
-                    <br>
-                    <input id="talent-2" class="form-control" type="text" placeholder="Talent #2" ng-model="person.talent2">
-                    <!--<br>-->
-                    <br>
-                    <input id="talent-3" class="form-control" type="text" placeholder="Talent #3" ng-model="person.talent3">
-                    <!--<br>-->
-                    <br>
-                    <input id="talent-4" class="form-control" type="text" placeholder="Talent #4" ng-model="person.talent4">
-                    <!--<br>-->
-                    <br>
-                    <input id="talent-5" class="form-control" type="text" placeholder="Talent #5" ng-model="person.talent5">
-                    <br>
-                </div>
-                <div class="col-sm-3">
-                    <!--<br>-->
-                    <input id="need-1" class="form-control" type="text" placeholder="Need #1" ng-model="person.need1">
-                    <!--<br>-->
-                    <br>
-                    <input id="need-2" class="form-control" type="text" placeholder="Need #1" ng-model="person.need2">
-                    <!--<br>-->
-                    <br>
-                    <input id="need-3" class="form-control" type="text" placeholder="Need #1" ng-model="person.need3">
-                    <!--<br>-->
-                    <br>
-                    <input id="need-4" class="form-control" type="text" placeholder="Need #1" ng-model="person.need4">
-                    <!--<br>-->
-                    <br>
-                    <input id="need-5" class="form-control" type="text" placeholder="Need #1" ng-model="person.need5">
-                    <br>
-                </div>
-            </form>
-            <form action="" class="form-group" ng-submit="findNeighbor()">
-                <div class="col-sm-3" ng-controller="AwesomeController as ac">
-                    <h3>Finding Neighbors</h3>
-                    <h4>Filter By:</h4>
-                    <label for="group">Personal or Group</label>
-                    <br>
-                    <span>Personal</span> <input name="group" type="radio" value="p" ngmodel="groupsize">
-                    <span>Group</span> <input name="group" type="radio" value="g" ngmodel="groupsize">
-                    <br>
-                    <br>
-                    <label for="catagory">Needs or Talents</label>
-                    <br>
-                    <span>Needs</span> <input name="n-or-t" type="radio" value="n" ngmodel="helpinghands">
-                    <span>Talents</span> <input name="n-or-t" type="radio" value="t" ngmodel="helpinghands">
-                    <br>
-                    <br>
-                    <button class="btn btn-warning" ng-click="submit">Find Neighbors</button>
-                </div>
-            </form>
-        </div>
-        <div class="row" ng-controller="NeighborController as nc">
-            <div class="col-sm-3" ng-repeat="human in nc.neighbors">
-                <h2>{{human.firstName}} {{human.lastName}}</h2>
-                <h4>{{human.address}}</h4>
-                <h4>{{human.phoneNumber}}</h4>
-                <ul ng-repeat="talent in person.talents">
-                    <li>{{talent}}</li>
-                </ul>
-                <ul ng-repeat="need in person.need">
-                    <li>{{need}}</li>
-                </ul>
-            </div>
-        </div>
-        
-    </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
+<body>
+    {{3*3}}
+<neighbor-component></neighbor-component>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
     <script src="plugins/angularfire.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>

@@ -1,0 +1,19 @@
+<form class="form-group" ng-submit="ac.findNeighbor(ac.groupsize, ac.helpinghands)">
+                <div class="col-sm-3">
+                    <h3>Finding Neighbors</h3>
+                    <h4>Filter By:</h4>
+                    <label for="group">Personal or Group</label>
+                    <br>
+                    <span>Personal</span> <input name="group" type="radio" value="p" ngmodel="ac.groupsize">
+                    <span>Group</span> <input name="group" type="radio" value="g" ngmodel="ac.groupsize">
+                    <br>
+                    <br>
+                    <label for="catagory">Needs or Talents</label>
+                    <br>
+                    <span>Needs</span> <input name="n-or-t" type="radio" value="n" ngmodel="ac.helpinghands">
+                    <span>Talents</span> <input name="n-or-t" type="radio" value="t" ngmodel="ac.helpinghands">
+                    <br>
+                    <br>
+                    <button class="btn btn-warning" ng-click="submit">Find Neighbors</button>
+                </div>
+            </form>

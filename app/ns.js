@@ -1,5 +1,11 @@
-angular.module("MasterController")
+;(function(){
+
+ 
+angular.module("awesomeNeighbors")
     .service("NeighborService", function () {
-        this.neighbors = [];
+        var ns = this;
+        ns.neighbors = [];
 
 })
+
+}());
