@@ -40,6 +40,7 @@
             // NeighborService.neighbors.push(human);
             // nc.neighbors = NeighborService.neighbors;
             nc.neighbors.push(human);
+            localStorage.setItem(JSON.stringify(human))
             nc.person = {}
         }
 
