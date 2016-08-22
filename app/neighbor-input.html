@@ -53,12 +53,12 @@
                 </div>
             </form>
             
-<awesome-component></awesome-component>
+<awesome-filter></awesome-filter>
 
         </div>
         <div class="row">
             <div class="col-sm-3" ng-repeat="human in nc.neighbors track by $index">
-                <h2>{{human.firstName}} {{human.lastName}}</h2>
+                <h2>{{human.firstName}} {{human.lastName}}</h2> <input type="checkbox" value="$index">
                 <h4>{{human.address}}</h4>
                 <h4>{{human.phoneNumber}}</h4>
                 <h5> <strong> Talents</strong></h5>

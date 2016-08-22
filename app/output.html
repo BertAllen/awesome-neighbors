@@ -1,0 +1,18 @@
+<div class="container">
+     <div class="row">
+            <div class="col-sm-3" ng-repeat="human in nc.neighbors track by $index">
+                <h2>{{human.firstName}} {{human.lastName}}</h2> <input type="checkbox" value="$index">
+                <h4>{{human.address}}</h4>
+                <h4>{{human.phoneNumber}}</h4>
+                <h5> <strong> Talents</strong></h5>
+                <ul ng-repeat="talent in human.talents track by $index">
+                    <li>{{talent}}</li>
+                </ul>
+                <h5><strong>Needs</strong></h5>
+                <ul ng-repeat="need in human.needs track by $index">
+                    <li>{{need}}</li>
+                </ul>
+            </div>
+        </div>
+        
+</div>
