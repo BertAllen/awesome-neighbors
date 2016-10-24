@@ -50,3 +50,4 @@
 
     }
 } ());
+const author = "Bert Allen";
