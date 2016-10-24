@@ -17,7 +17,6 @@
         // nc.moNeighbors = ns.neighbors
         nc.Neighbor = function (person) {
             // debugger;
-
             this.firstName = person.firstName;
             this.lastName = person.lastName;
             this.address = person.address;
@@ -35,12 +34,16 @@
         }
 
         nc.addNeighbor = function (person) {
+            if (person == undefined || !person.firstName || !person.lastName) {
+                alert("Cannot create a neighbor without a first and last name");
+                return;
+            }
             // debugger
             var human = new nc.Neighbor(person);
             // NeighborService.neighbors.push(human);
             // nc.neighbors = NeighborService.neighbors;
             nc.neighbors.push(human);
-            localStorage.setItem(JSON.stringify(human))
+            localStorage.setItem("awesome", JSON.stringify(human))
             nc.person = {}
         }
 
